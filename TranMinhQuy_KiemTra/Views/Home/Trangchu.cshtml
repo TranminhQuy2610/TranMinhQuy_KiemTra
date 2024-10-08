@@ -1,0 +1,299 @@
+﻿<style type="text/css">
+    .main-menu ul li img {
+        height: 25px;
+    }
+
+    .main-menu {
+        font-size: 1rem;
+    }
+
+        .main-menu ul li {
+            font-size: 15px;
+        }
+    #container-shoppingcart {
+        justify-content: center;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    #container-left {
+        display: flex;  
+        justify-content: flex-start; 
+        align-items: flex-start;  
+        margin-top: 20px;
+    }
+    #left {
+        width: 30%;
+    }
+    #mid {
+        margin-right: 20px;
+    }
+    #right {
+        display: flex;
+        flex-direction: column;
+    }
+        .product-image{
+            text-align:left;
+        }
+        .product-image{
+            display:flex;
+            justify-content:left;
+            margin-top:20px;
+        }
+        .product-image img{
+            width: 100px;
+            height:100px;
+            margin: 0 10px;
+        }
+        .view-more {
+            display:block;
+            margin-left:20px;
+            text-decoration:none;
+            color:blue;
+        }
+    #image-selector {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+        #image-selector label {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+    #selected-image {
+        text-align: center;
+    }
+    
+
+.Price {
+        color: red;
+}
+    .strikethrough {
+        text-decoration: line-through;
+    }
+    .product-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+
+        .product-card img {
+            width: 100%;
+        }
+
+        .product-card ul {
+            list-style: none;
+            padding: 0;
+        }
+    .counter {
+        display: flex;
+        align-items: center;
+    }
+
+        .counter button {
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .counter input[type="number"] {
+            width: 40px;
+            text-align: center;
+        }
+    .btnVani {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+ @{
+    ViewBag.Title = "ShoppingCart";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+<nav class="main-menu">
+    <ul>
+        <li>
+
+            <a href="#">Cam kết</a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="~/Content/image/Capture1.JPG" />
+            </a>
+            <a href="#">
+                100% hàng thật
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="~/Content/image/Capture2.JPG" />
+            </a>
+            <a href="#">Hoàn 200% nếu là hàng giả</a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="~/Content/image/Capture3.JPG" />
+            </a>
+            <a href="#">30 ngày đổi trả</a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="~/Content/image/Capture4.JPG" />
+            </a>
+            <a href="#">Giao nhanh 2h</a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="~/Content/image/Capture5.JPG" />
+            </a>
+            <a href="#">Giá siêu rẻ</a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="~/Content/image/Capture6.JPG" />
+            </a>
+            <a href="#">Freeship mọi đơn</a>
+        </li>
+    </ul>
+</nav>
+<div id="container-left">
+    <div id="left">
+        <img src="~/Content/image/Capture7.JPG" alt="Capture7"
+                 style="width:320px; height: 300px; " />
+         <div class="product-image">
+            <img src="~/Content/image/Glucerna-1.jpg" alt="Glucerna-1"
+                     style="width:90px; height: 90px; " />
+            <img src="~/Content/image/Glucerna_lua_mach.jpg"
+                     style="width:90px; height: 90px; " />
+             <img src="~/Content/image/Sua_Glucerna.jpg"
+                     style="width:90px; height: 90px; " />
+              <img src="~/Content/image/Glucerna_nuoc.jpg"
+                     style="width:90px; height: 90px; " />
+          </div>
+        <img src="~/Content/image/mặt.jpg" />
+        <p>
+            Xem thêm
+        </p>
+        <button>
+            Ưu Điểm & lưu ý của sản phẩm
+        </button>
+    </div>
+</div>
+<div id="container-shoppingcart">
+    <div id="mid">
+
+        <a href="#">
+            <img src="~/Content/image/ttt.jpg" />
+        </a>
+        <a href="#">
+            TOP DEAL
+        </a>
+        <a href="#">
+            <img src="~/Content/image/Capture3.JPG" />
+        </a>
+        <a href="#">
+            30 NGÀY ĐỔI TRẢ
+        </a>
+        <a href="#">
+            <img src="~/Content/image/Capture1.JPG" />
+        </a>
+        <a href="#">
+            CHÍNH HẢNG
+        </a>
+        <p>Thương hiệu </p>
+        <button>
+            Glucerna
+        </button>
+        <p>Lon Sữa Glucerna 800g/lon - tặng 2 gói dùng thử</p>
+        <p>5.0</p>
+        <img src="~/Content/image/SAO.jpg" />
+        <p>
+            11
+        </p>
+        <p>đã bán 436 </p>
+        <p>Made in Spain </p>
+        <p>Hương vị </p>
+        <button class="btnVani">Vani</button>
+        <p class="Price">
+            1.034.550đ
+        </p>
+        <p> Thông tin vận chuyển </p>
+        <p>Giao đến Q1,p.Bến Nghé, Hồ Chí Minh</p>
+        <button>đổi </button>
+        <p></p>
+        <a href="#">
+            <img src="~/Content/image/Untitled.jpg" />
+        </a>
+        <a href="#">Giao Siêu tốc 2h</a>
+        <p>Trước 11h hôm nay:Miễn Phí </p><p class="strikethrough"> 25.000đ</p>
+
+        <a href="#">
+            <img src="~/Content/image/ghh.jpg" />
+        </a>
+        <a href="#">Giao đúng sáng mai </a>
+
+        <p>8h-12h, 01/10;Miễn phí </p><p class="strikethrough">19.600đ</p>
+
+        <a href="#">
+            <img src="~/Content/image/gbb.jpg" />
+        </a>
+        <a href="#">
+            Freeship 10k đơn từ 45k, Freeship 25k đơn từ 100k
+        </a>
+        <a href="#">
+            <img src="~/Content/image/hhh.jpg" />
+        </a>
+
+    </div>
+    <div id="right">
+        <a href="#">
+            <img src="~/Content/image/iii.jpg" />
+        </a>
+        <a href="#">
+            Tiki Trading
+        </a>
+        <a href="#">
+            <img src="~/Content/image/OOO.jpg" />
+        </a>
+        <a href="#">
+            OFFICE
+        </a>
+        <p>4,7</p>
+        <a href="#">
+            <img src="~/Content/image/KKK.jpg" />
+        </a>
+        <a href="#">
+            (5.5tr+ đánh giá)
+        </a>
+        <a href="#">
+            <img src="~/Content/image/LLL.jpg" />
+        </a>
+        <div class="product-card">
+            <a href="#">
+                <img src="~/Content/image/uuu.jpg" />
+            </a>
+            <a href="#">
+                Vani
+            </a>
+            <p>Số Lượng</p>
+            <div class="counter">
+                <button class="decrement">-</button>
+                <input type="number" id="quantity" value="1" min="1">
+                <button class="increment">+</button>
+            </div>
+            <p>Tạm tính</p>
+            <p>Giá: 1.034.550đ</p>
+            <button>Mua ngay </button>
+            <button>Thêm vào giỏ</button>
+            <button>Mua trước trả sau </button>
+        </div>
+    </div>
+</div>
+    shopping crat
+
+

@@ -1,0 +1,130 @@
+﻿<style type="text/css">
+
+
+    body {
+        background-color: ghostwhite;
+    }
+
+
+    h2 {
+        color: green;
+        display: flex;
+        justify-content: center;
+        background-color: palegreen;
+        font-size: 20px;
+        height: 30px;
+    }
+
+        h2 a {
+            color: blue;
+            margin-left: 1rem;
+        }
+
+    header {
+        background-color: white;
+        border: 5px solid #5486d7;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+        nav ul li {
+            margin-left: 30px;
+            font-size: 1.2rem;
+        }
+
+    ul li a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    nav ul li img {
+        height: 50px;
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    .vitri {
+        color: black;
+    }
+
+    input {
+        width: 700px;
+    }
+
+    #search-button {
+        color: blue;
+    }
+     
+</style>
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Freeship đơn từ 45k, giảm nhiều hơn cùng <a>Freeship</a> Xtra</h2>
+        <header>
+            <div class="logo">
+                <img src="~/Content/image/logo-tiki-inkythuatso-01-24-09-27-33.jpg" />
+            </div>
+            <input type="text" id="search-input" placeholder="Free đơn từ 45k......" />
+            <button id="search-button">Tìm kiếm</button>
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/image/Capture8.JPG" />
+                        </a>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/image/Capture9.JPG" />
+                        </a>
+                        <a href="#">Tài khoản</a>
+                    </li>
+                    <li>
+                        <img src="~/Content/image/Capture.JPG" />
+                    </li>
+
+                </ul>
+
+                <div>
+
+                    <a href="#" class="vitri">
+                        <img src="~/Content/image/Capture10.JPG" />
+                    </a>
+                    <a href="#" class="vitri">
+                        Giao đến: Q .1, Bến Nghé, Hồ Chí Minh
+                    </a>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>footer</footer>
+</body>
+</html>
